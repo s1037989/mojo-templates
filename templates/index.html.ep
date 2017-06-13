@@ -1,0 +1,12 @@
+% layout 'default';
+% title 'Mojolicious Classic Template (Main)';
+%# Uncomment and provide content for these or else default Lorem ipsum will be rendered
+%# content headline => begin
+%# end
+%# content main_form => begin
+%# end
+%# content overlay => begin
+%# end
+%# content solid => begin
+%# end
+
