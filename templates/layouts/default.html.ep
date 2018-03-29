@@ -88,7 +88,7 @@
                     <p>
                       <ul>
                         <li><%== '<strong>' unless session 'color' %><%= link_to 'Default' => 'color', {color => ''} %><%== '</strong>' unless session 'color' %></li>
-                        % for ( qw/bold bright earthy/ ) {
+                        % for ( qw/bold bright earthy sky/ ) {
                         <li><%== '<strong>' if $_ eq session 'color' %><%= link_to ucfirst($_) => 'color', {color => $_} %><%== '</strong>' if $_ eq session 'color' %></li>
                         % }
                       </ul>
