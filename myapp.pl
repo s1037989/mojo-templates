@@ -1,6 +1,9 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 
+plugin 'Config';
+plugin 'ReverseProxyWithPath';
+
 get '/' => 'index';
 get '/internal';
 get '/color/:color' => {color => ''} => sub {
