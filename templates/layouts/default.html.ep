@@ -8,10 +8,10 @@
         %= stylesheet '/assets/css/main.css'
         %= stylesheet sprintf '/assets/css/%s.css', session 'color' if session 'color'
         %#= stylesheet '/bootstrap/css/bootstrap.min.css'
+        %= stylesheet '//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         %= stylesheet 'https://fonts.googleapis.com/css?family=Muli:400,700|News+Cycle'
         %#= javascript 'https://code.jquery.com/jquery-1.11.2.min.js'
 
-        %= stylesheet '//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         %#= stylesheet '//yegor256.github.io/tacit/tacit.min.css'
         %= javascript '//code.jquery.com/jquery-3.4.1.slim.min.js'
         %= javascript '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
@@ -27,16 +27,16 @@
                      <!-- I recommend keeping 3 or fewer items in the navigation, or they might
                           not all fit nicely on mobile. If this ends up being a problem sometime,
                           just let me know and I'll change the mobile setup. -->
-                     <ul class="nav navbar-nav navbar-right">
+                     <ul class="nav justify-content-end">
                          % if ( current_route eq 'index' ) {
-                           <li><%= link_to 'Internal Page' => 'internal' %></li>
+                           <li class="nav-item"><%= link_to 'Internal Page' => 'internal', (class => 'nav-link') %></li>
                          % } else {
-                           <li><%= link_to 'Main Page' => 'index' %></li>
+                           <li class="nav-item"><%= link_to 'Main Page' => 'index', (class => 'nav-link') %></li>
                          % }
-                         <li><a href="#">Normal Link</a></li>
+                         <li class="nav-item"><a class="nav-link" href="#">Normal Link</a></li>
                          <!-- Both buttons or normal links are available in the navigation bar.
                               Nothing special here, just the standard bootstrap classes -->
-                         <button class="btn btn-default navbar-btn">Button</button>
+                         <li class="nav-item"><button class="btn btn-default navbar-btn">Button</button></li>
                      </ul>
                  </div>
              </nav>
@@ -75,9 +75,11 @@
                 <p class="headline">Really Catchy Headline</p>
                 <h2>Here's Why You Need This:</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
                 % end
                 %= content overlay => begin
                 <h2>Internal Page Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
                 % end
             </div>
@@ -101,6 +103,7 @@
                       </ul>
                     </p>
                 </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet.</p>
                 % end
             </div>
